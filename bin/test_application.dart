@@ -1,4 +1,5 @@
 //   import 'dart:math';
+// import 'dart:io';
 //   //Task 1
 //   void main() {
 //   double x = 2.5;
@@ -174,11 +175,11 @@
 
 // //Bonus Task 3
 // void main() {
-//   int n = 3;  // дала значение для n
+//   int n = 3;  
 
-//   int daysPassed = n * 30 + 2; // В одном месяце в среднем 30 дней
+//   int daysPassed = n * 30 + 2; 
 
-//   int month = (daysPassed - 2) ~/ 30; // Убрала прошедшие 2 дня 
+//   int month = (daysPassed - 2) ~/ 30; 
 
 
 //   if (daysPassed < 2) {

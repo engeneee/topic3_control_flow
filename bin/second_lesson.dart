@@ -1,4 +1,4 @@
-import 'dart:io';
+
 
 //Task 1 (a)
 // void main(){
@@ -252,65 +252,112 @@ import 'dart:io';
 // }
 
 //Task 7(b)
+// void main() {
+//   String? inputA = stdin.readLineSync();
 
-void main() {
-  print("Введите значение a:");
-  String? inputA = stdin.readLineSync();
+//   if (inputA != null) {
+//     int? a = int.tryParse(inputA);
 
-  if (inputA != null) {
-    int? a = int.tryParse(inputA);
+//     if (a != null) {
+//       String? inputB = stdin.readLineSync();
+//       if (inputB != null) {
+//         int? b = int.tryParse(inputB);
 
-    if (a != null) {
-      print("Введите значение b (больше или равно a):");
-      String? inputB = stdin.readLineSync();
+//         if (b != null) {
+//           if (b >= a) {
+//             double sum = 0;
+//             int count = 0;
 
-      if (inputB != null) {
-        int? b = int.tryParse(inputB);
+//             for (int i = a; i <= b; i++) {
+//               sum += i;
+//               count++;
+//             }
 
-        if (b != null) {
-          if (b >= a) {
-            double sum = 0;
-            int count = 0;
+//             double average = sum / count;
 
-            // Находим сумму чисел от a до b
-            for (int i = a; i <= b; i++) {
-              sum += i;
-              count++;
-            }
+//             print("Среднее арифметическое всех целых чисел равно $average.");
+//           } else {
+//             print("Ошибка");
+//           }
+//         } else {
+//           print("Ошибка");
+//         }
+//       } else {
+//         print("Ошибка");
+//       }
+//     } else {
+//       print("Ошибка");
+//     }
+//   } else {
+//     print("Ошибка");
+//   }
+// }
 
-            double average = sum / count;
+//Task 8
+// void main() {
+//   double sum = 0;
+//   double term = 1;
 
-            print("Среднее арифметическое всех целых чисел от $a до $b равно $average.");
-          } else {
-            print("Ошибка: b должно быть больше или равно a.");
-          }
-        } else {
-          print("Ошибка ввода b. Введите целое число.");
-        }
-      } else {
-        print("Ошибка ввода b. Пожалуйста, введите число.");
-      }
-    } else {
-      print("Ошибка ввода a. Введите целое число.");
-    }
-  } else {
-    print("Ошибка ввода a. Пожалуйста, введите число.");
-  }
-}
+//   for (int i = 0; i <= 8; i++) {
+//     sum += term;
+//     term /= 3; 
+//   }
 
+//   print("Сумма ряда равна $sum.");
+// }
 
+//Task 9
+// void main() {
+//   int number = 2364517;
 
-
-
-
-
-
-
-
-
-
-
-
-
+//   int count3 = 0;
+//   int lastN = number % 10;
+//   int evenCount = 0;
+//   int sumGreaterThan5 = 0;
+//   int producGreaterThan7 = 1;
+//   int zeroAndFiveCount = 0;
 
 
+//   while (number > 0) {
+//     int d = number % 10;
+
+//     // а) Количество цифр 3
+//     if (d == 3) {
+//       count3++;
+//     }
+
+//     // б) Сколько раз встречается последняя цифра
+//     if (d == lastN) {
+//       zeroAndFiveCount++;
+//     }
+
+//     // в) Количество четных цифр
+//     if (d % 2 == 0) {
+//       evenCount++;
+//     }
+
+//     // г) Сумма цифр, больших пяти
+//     if (d > 5) {
+//       sumGreaterThan5 += d;
+//     }
+
+//     // д) Произведение цифр, больших семи
+//     if (d > 7) {
+//       producGreaterThan7 *= d;
+//     }
+
+//     // е) Сколько раз встречаются цифры 0 и 5 (всего)
+//     if (d == 0 || d == 5) {
+//       zeroAndFiveCount++;
+//     }
+
+//     number ~/= 10;
+//   }
+
+//   print("а) Количество цифр 3: $count3");
+//   print("б) Сколько раз встречается последняя цифра: $zeroAndFiveCount");
+//   print("в) Количество четных цифр: $evenCount");
+//   print("г) Сумма цифр, больших пяти: $sumGreaterThan5");
+//   print("д) Произведение цифр, больших семи: $producGreaterThan7");
+//   print("е) Сколько раз встречаются цифры 0 и 5 (всего): $zeroAndFiveCount");
+// }
